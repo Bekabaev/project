@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+}
+h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,p,a{
+    font-family: Arial, Helvetica, sans-serif ;
+}
+.container{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+
+}
+header{
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 black;
+    position: sticky;
+    top: 0;
+    
+}
+.header-logo{
+    color: blue;
+}
+.navigation{
+    display: flex;
+    align-items: center;
+}
+/* .navbar{
+    margin-right: 50px;
+}
+.nav{
+    display: flex;
+    list-style-type: none;
+    
+}
+.nav-item{
+    margin:0 10px 0 10px;
+    padding: 7px 0 7px 0;
+}
+
+.nav-item a {
+    color: black;
+} */
+
+.search{
+    margin-right: 10px;
+}
+.search-field{
+    padding: 5px;
+}
+.button{
+    padding: 6px 10px 6px 10px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: blue;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.burger{
+    display: none;
+}
+.stick{
+    border: 2px solid;
+    border-radius: 5px;
+    color: blue;
+    padding: 0 15px;
+    margin-bottom: 5px;
+}
+
+
+.dropdown{
+    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    align-self: center;
+}
+
+.dropdown .search{
+    margin: 0;
+}
+
+/* MAIN */
+main .container{
+    flex-direction: column;
+}
+
+.hello{
+    margin-top: 50px;
+    align-self: center;
+}
+.hello-text{
+    font-size: 80px;
+}
+
+.posts{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex: 200px;
+    margin-top: 70px;
+}
+
+.post{
+    max-width: 300px;
+    margin: 0 20px 60px 20px;
+}
+
+.post-img img{
+    max-height: 190px;
+    border-radius: 20px;
+}
+
+.post-head{
+    padding-top: 15px;
+    color: black;
+}
+
+.post-info{
+    padding-top: 10px;
+    color: black;
+    line-height: 25px;
+}
+
+.post-date{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.fa-clock{
+    color: rgb(59, 148, 225);
+}
+.date{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: rgb(59, 148, 225);
+}
+
+/* Footer */
+footer{
+    background-color:blue;
+}
+
+footer .container{
+    flex-direction: column;
+}
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.footer-logo{
+    color: white;
+}
+
+.fa-brands{
+    font-size: 22px;
+    color: white;
+    margin-left: 5px ;
+}
+
+.copyright{
+    color:#afb4c3 ;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+/* registration */
+
+.registration{
+    background-color: blue;
+    width: 300px;
+    height: 400px;
+    position: fixed;
+    top: 25%;
+    left: 25%;
+}
+
+@media screen and (max-width:1024px ) {
+    .container,.dropdown{
+        max-width: 769px;
+    }
+    .hello{
+        text-align: center;
+    }
+    .hello-text{
+        font-size: 50px;
+        
+    }
+
+}
+
+@media screen and (max-width:768px ) {
+    .container, .dropdown{
+        max-width: 481px;
+    }
+    .hello-text{
+        font-size: 50px;
+        
+    }
+    .post{
+        max-width: 500px;
+    }
+    .post-img img{
+        max-height: 200px;
+    }
+    header .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navigation{
+        display: none;
+    }
+    .burger{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+    .dropdown{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        align-self: center;
+    }
+    /* header .container{
+        justify-content: center;
+    } */
+
+}
+
+
+@media screen and (max-width:480px ) {
+    .container,.dropdown{
+        max-width: 320px;
+    }
+
+    .hello-text{
+        font-size: 30px;
+        
+    } 
+    .post{
+        max-width: 500px;
+    }
+    .post-img img{
+        max-height: 150px;
+    }
+}
+
+@media screen and (max-width:319px ) {
+    .container{
+        max-width: 250px;
+    }
+
+    .hello-text{
+        font-size: 30px;
+        
+    } 
+    .post{
+        max-width: 500px;
+    }
+    .post-img img{
+        max-height: 150px;
+    }
+
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/537c9588e2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'polls/css/style.css' %}">
+    <title>IT-Blog</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="header-logo"><h1>IT-Blog</h1></a>
+            <div class="navigation">
+                <!-- <nav class="navbar">
+                    <ul class="nav" >
+                        <li class="nav-item"><a href="Posts">Posts</a></li>
+                        <li class="nav-item"><a href="Posts">Posts</a></li>
+                        <li class="nav-item"><a href="Posts">Posts</a></li>   
+                    </ul>
+                </nav> -->
+                <div class="search">
+                    <form>
+                        <input type="search" name="q" class="search-field"/>
+                        <input type="submit" value="Search" class="button" />
+                      </form>
+                </div>
+                <div class="login">
+                    <button onclick="document.getElementById('id01').style.display='block'" style="width: auto;" class="button">Log in</button>
+                </div>
+            </div>
+            <div class="burger">
+                <span class="stick"></span>
+                <span class="stick"></span>
+                <span class="stick"></span>
+            </div>
+            <!-- <div class="dropdown">
+                <div class="search">
+                    <form>
+                        <input type="search" name="q" class="search-field"/>
+                        <input type="submit" value="Search" class="button" />
+                      </form>
+                </div>
+                <div class="login">
+                    <button onclick="document.getElementById('id01').style.display='block'" style="width: auto;" class="button">Log in</button>
+                </div>
+            </div> -->
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="hello">
+                <span class="hello-text">WELCOME TO MY BLOG</span>
+            </div>
+            <section class="posts">
+                {% for post in post_data %}
+                <article class="post">
+                    <a href="post.html">
+                        <div class="post-img">
+                            <img src="static/images/post-photo1" alt="img">
+                        </div>
+                        <div class="post-head">
+                            <h2>{{post.post_title}}</h2>
+                        </div>
+                        <div class="post-info">
+                            <p>
+                                {{post.post_text}}
+                            </p>
+                        </div>
+                        <div class="post-date">
+                            <i class="fa-regular fa-clock"></i>
+                            <span class="date">{{post.pub_date}} </span>
+                        </div>
+                    </a>
+                </article>
+                {% endfor %}
+            
+            </section>
+        </div>
+    </main>
+
+    <!-- <div class="registration">
+
+    </div> -->
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <a href="" class="footer-logo"><h1>IT-Blog</h1></a>
+                <div class="social-media">
+                    <a href="https://github.com/Bekabaev"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://web.telegram.org/a/#-1001853698435"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://www.instagram.com/barystynpatwasy/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <span>Copyright: 2024</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
