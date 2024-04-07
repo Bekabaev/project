@@ -9,6 +9,7 @@ class Post(models.Model):
     pub_date = models.DateTimeField("data published")
     slug = models.SlugField(max_length=200, unique=True, blank=True, null=True, verbose_name='URL')
     image = models.ImageField(upload_to="post_images", blank=True, null=True)
+    text = models.CharField(max_length = 70)
 
     def __str__(self):
         return self.post_text
